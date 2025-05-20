@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Uptown - Free Bootstrap 4 Template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    
+
+    <!-- END nav -->
+    
+<div class="hero-wrap ftco-degree-bg" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row no-gutters slider-text justify-content-center align-items-center">
+      <div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-end">
+        <div class="text text-center">
+          <h1 class="mb-4">Invitación <br>Especial de Cumpleaños</h1>
+
+          <p style="font-size: 18px;">Quiero compartir contigo un día muy especial lleno de alegría, música y momentos inolvidables. Espero que puedas acompañarme a celebrar esta fecha tan importante.</p>
+
+          <!-- Cuenta regresiva aquí -->
+          <style>
+            #countdown {
+              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+              color: #dfc040;
+              display: flex;
+              justify-content: center;
+              gap: 20px;
+              font-weight: 700;
+              font-size: 24px;
+              margin: 25px 0;
+              flex-wrap: wrap; /* para que en móvil baje */
+            }
+            #countdown div {
+              background: rgba(255, 255, 255, 0.1);
+              padding: 4px 14px;
+              border-radius: 10px;
+              min-width: 75px;
+              text-align: center;
+              box-shadow: 0 0 8px #dfc040aa;
+              margin-bottom: 10px;
+            }
+            #countdown div span.number {
+              display: block;
+              font-size: 32px;
+              letter-spacing: 1.5px;
+            }
+            #countdown div span.label {
+              font-size: 14px;
+              opacity: 0.8;
+              margin-top: 5px;
+              text-transform: uppercase;
+            }
+          </style>
+
+          <div id="countdown">
+            <div><span class="number" id="days">00</span><span class="label">días</span></div>
+            <div><span class="number" id="hours">00</span><span class="label">hrs</span></div>
+            <div><span class="number" id="minutes">00</span><span class="label">min</span></div>
+            <div><span class="number" id="seconds">00</span><span class="label">seg</span></div>
+          </div>
+
+          <form action="#" class="search-location mt-md-5">
+            <div class="row justify-content-center">
+              <div class="col-lg-10 align-items-end">
+                <div class="form-group">
+                  <!-- Aquí tu formulario o contenido -->
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mouse">
+    <a href="#" class="mouse-icon">
+      <div class="mouse-wheel"><span class="ion-ios-arrow-round-down"></span></div>
+    </a>
+  </div>
+</div>
+
+<script>
+  const birthdayDate = new Date("May 22, 2025 20:00:00").getTime();
+
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = birthdayDate - now;
+
+    if (distance < 0) {
+      document.getElementById("countdown").innerHTML = "¡La fiesta ya comenzó!";
+      clearInterval(interval);
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    document.getElementById("days").textContent = days.toString().padStart(2, '0');
+    document.getElementById("hours").textContent = hours.toString().padStart(2, '0');
+    document.getElementById("minutes").textContent = minutes.toString().padStart(2, '0');
+    document.getElementById("seconds").textContent = seconds.toString().padStart(2, '0');
+  }
+
+  updateCountdown();
+  const interval = setInterval(updateCountdown, 1000);
+</script>
+
+
+<section class="ftco-section ftco-no-pb">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-12 heading-section text-center ftco-animate mb-5">
+        <span class="subheading">Antes de venir a la fiesta</span>
+        <h2 class="mb-2">Lo que no puedes olvidar</h2>
+      </div>
+    </div>
+    <div class="row d-flex">
+      <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services d-block text-center">
+          <div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-piggy-bank"></span></div>
+          <div class="media-body py-md-4">
+            <h3>Compra tu energía</h3>
+            <p>Prepara tu cuerpo para la fiesta, ¡sin quedarte sin pilas!</p>
+          </div>
+        </div>      
+      </div>
+      <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services d-block text-center">
+          <div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-wallet"></span></div>
+          <div class="media-body py-md-4">
+            <h3>Prepara tu outfit</h3>
+            <p>Elige el mejor traje o vestido para destacar en la fiesta.</p>
+          </div>
+        </div>      
+      </div>
+      <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services d-block text-center">
+          <div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-file"></span></div>
+          <div class="media-body py-md-4">
+            <h3>Organiza tus regalos</h3>
+            <p>No olvides el detalle perfecto para compartir alegría.</p>
+          </div>
+        </div>      
+      </div>
+      <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+        <div class="media block-6 services d-block text-center">
+          <div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-locked"></span></div>
+          <div class="media-body py-md-4">
+            <h3>Asegura tu lugar</h3>
+            <p>Confirma tu asistencia para que no te pierdas la celebración.</p>
+          </div>
+        </div>      
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <section class="ftco-section goto-here">
+    	<div class="container">
+<div class="row justify-content-center">
+  <div class="col-md-12 heading-section text-center ftco-animate mb-5">
+    <span class="subheading">Todo listo para la fiesta</span>
+    <h2 class="mb-2">Tu guía para llegar, regalar y divertirte</h2>
+  </div>
+</div>
+
+        <div class="row">
+        	<!-- Card con botón que abre el modal -->
+        <div class="col-md-4">
+          <div class="property-wrap ftco-animate">
+            <a href="#" class="img" style="background-image: url(images/work-1.jpg);" data-toggle="modal" data-target="#modalMapa"></a>
+            <div class="text">
+
+              <h3><a href="#" data-toggle="modal" data-target="#modalMapa">Verifica cómo llegar</a></h3>
+              <span class="location">Calle Jorge Huston #280 — Trujillo </span>
+              <a href="#" class="d-flex align-items-center justify-content-center btn-custom" data-toggle="modal" data-target="#modalMapa">
+                <span class="ion-ios-link"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+          <!-- Modal que muestra el mapa -->
+          <div class="modal fade" id="modalMapa" tabindex="-1" role="dialog" aria-labelledby="modalMapaLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modalMapaLabel">¿Cómo llegar? — Jorge Huston 280, Trujillo</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body p-0">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.9312415597137!2d-79.03945871599122!3d-8.10848396027303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad3d9bb6960ecb%3A0x46b6d2458997de03!2sC.%20Jorge%20Ch%C3%A1vez%20360%2C%20Trujillo%2013011!5e0!3m2!1ses-419!2spe!4v1747715836609!5m2!1ses-419!2spe"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        	<div class="col-md-4">
+          <div class="property-wrap ftco-animate">
+            <a href="#" class="img" id="openYapeModalImg" style="background-image: url(images/work-2.jpg);"></a>
+            <div class="text">
+              <h3><a href="#" id="openYapeModalTitle">Envía tu regalo fácilmente</a></h3>
+              <span class="location">¿No te dio tiempo de comprar regalo?</span>
+              <a href="#" class="d-flex align-items-center justify-content-center btn-custom" id="openYapeModalIcon">
+                <span class="ion-ios-link"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <div id="yapeModal" style="display:none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.7);">
+          <div style="background: white; margin: 4% auto; padding: 20px; border-radius: 10px; max-width: 90%; max-height: 80vh; overflow-y: auto; text-align: center; position: relative;">
+            <h2>Envía tu regalo con Yape</h2>
+            <img src="https://fastprint.pe/wp-content/uploads/2023/06/yapeyplin.png" alt="Yape QR" style="max-width: 100%; height: auto; margin: 20px 0;">
+            <p><strong>Número a yapear:</strong> 91352482</p>
+            <p><strong>Nombre:</strong> José Pedro Muñiz</p>
+            <button id="closeYapeModal" style="padding: 10px 20px; background-color: #dfc040; border: none; border-radius: 5px; cursor: pointer;">Cerrar</button>
+          </div>
+        </div>
+
+        <script>
+          const openModal = (e) => {
+            e.preventDefault();
+            document.getElementById('yapeModal').style.display = 'block';
+          };
+
+          // Agrego listeners a todos los elementos para abrir modal
+          document.getElementById('openYapeModalBtn')?.addEventListener('click', openModal);
+          document.getElementById('openYapeModalIcon').addEventListener('click', openModal);
+          document.getElementById('openYapeModalImg').addEventListener('click', openModal);
+          document.getElementById('openYapeModalTitle').addEventListener('click', openModal);
+
+          document.getElementById('closeYapeModal').addEventListener('click', function() {
+            document.getElementById('yapeModal').style.display = 'none';
+          });
+
+          window.onclick = function(event) {
+            const modal = document.getElementById('yapeModal');
+            if(event.target === modal) {
+              modal.style.display = "none";
+            }
+          };
+        </script>
+
+        <style>
+          /* Responsive para móvil */
+          @media (max-width: 576px) {
+            .property-wrap .text {
+              padding: 15px 10px;
+            }
+            .property_list li {
+              font-size: 14px;
+            }
+            #yapeModal > div {
+              margin: 10% auto;
+              max-width: 95%;
+              padding: 15px;
+            }
+            #yapeModal h2 {
+              font-size: 1.2rem;
+            }
+            #yapeModal p {
+              font-size: 1rem;
+            }
+            #closeYapeModal {
+              width: 100%;
+              font-size: 1rem;
+              padding: 12px 0;
+            }
+          }
+        </style>
+
+          
+        <div class="col-md-4">
+          <div class="property-wrap ftco-animate">
+            <a href="#" class="img" id="openWhatsappModalImg" style="background-image: url(images/work-3.jpg);"></a>
+            <div class="text">
+              <h3><a href="#" id="openWhatsappModalTitle">Sube todas las fotos durante la fiesta</a></h3>
+              <span class="location">Grupo WhatsApp Fiesta</span>
+              <a href="#" class="d-flex align-items-center justify-content-center btn-custom" id="openWhatsappModalIcon">
+                <span class="ion-ios-link"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal WhatsApp -->
+        <div id="whatsappModal" style="display:none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.7);">
+          <div style="background: white; margin: 5% auto; padding: 20px; border-radius: 10px; max-width: 90%; text-align: center; position: relative;">
+            <h2>¡Únete al grupo de WhatsApp!</h2>
+            <p>Sube todas las fotos durante la fiesta al grupo de WhatsApp para compartirlas con todos.</p>
+            
+            <button id="joinGroupBtn" style="background-color: #25D366; color: white; border: none; padding: 12px 20px; border-radius: 5px; font-weight: bold; cursor: pointer; margin: 10px 0; width: 100%;">Unirme automáticamente</button>
+            
+            <button id="shareLinkBtn" style="background-color: #128C7E; color: white; border: none; padding: 12px 20px; border-radius: 5px; font-weight: bold; cursor: pointer; margin-bottom: 10px; width: 100%;">Compartir enlace</button>
+            
+            <button id="closeWhatsappModal" style="background-color: #ccc; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; width: 100%;">Cancelar</button>
+          </div>
+        </div>
+
+        <script>
+          // Función para abrir modal
+          const openWhatsappModal = (e) => {
+            e.preventDefault();
+            document.getElementById('whatsappModal').style.display = 'block';
+          };
+
+          // Asignar eventos a los elementos clickeables
+          document.getElementById('openWhatsappModalImg').addEventListener('click', openWhatsappModal);
+          document.getElementById('openWhatsappModalTitle').addEventListener('click', openWhatsappModal);
+          document.getElementById('openWhatsappModalIcon').addEventListener('click', openWhatsappModal);
+
+          // Cerrar modal
+          document.getElementById('closeWhatsappModal').addEventListener('click', () => {
+            document.getElementById('whatsappModal').style.display = 'none';
+          });
+
+          // Cerrar modal al hacer clic fuera
+          window.onclick = function(event) {
+            const modal = document.getElementById('whatsappModal');
+            if(event.target === modal) {
+              modal.style.display = "none";
+            }
+          };
+
+          // Botón Unirme automáticamente (abre enlace WhatsApp)
+          document.getElementById('joinGroupBtn').addEventListener('click', () => {
+            window.open('https://chat.whatsapp.com/tu-enlace-del-grupo', '_blank');
+          });
+
+          // Botón Compartir enlace
+          document.getElementById('shareLinkBtn').addEventListener('click', () => {
+            if (navigator.share) {
+              navigator.share({
+                title: 'Únete al grupo de WhatsApp de la fiesta',
+                text: 'Sube todas las fotos durante la fiesta al grupo de WhatsApp.',
+                url: 'https://chat.whatsapp.com/tu-enlace-del-grupo',
+              }).catch((error) => console.log('Error al compartir:', error));
+            } else {
+              alert('Tu navegador no soporta la función de compartir automáticamente. Copia este enlace: https://chat.whatsapp.com/tu-enlace-del-grupo');
+            }
+          });
+        </script>
+
+        <style>
+          /* Responsive */
+          @media (max-width: 576px) {
+            #whatsappModal > div {
+              margin: 20% 10px;
+              max-width: 95%;
+              padding: 15px;
+            }
+            #whatsappModal h2 {
+              font-size: 1.3rem;
+            }
+            #whatsappModal p {
+              font-size: 1rem;
+              margin-bottom: 15px;
+            }
+            #whatsappModal button {
+              font-size: 1rem;
+              padding: 12px 0;
+            }
+          }
+        </style>
+
+        </div>
+    	</div>
+    </section>
+
+    <section class="ftco-section ftco-degree-bg services-section img mx-md-5" style="background-image: url(images/bg_2.jpg);">
+    	<div class="overlay"></div>
+    	<div class="container">
+    		<div class="row justify-content-start mb-5">
+          <div class="col-md-6 text-center heading-section heading-section-white ftco-animate">
+          	<span class="subheading">Work flow</span>
+            <h2 class="mb-3">How it works</h2>
+          </div>
+        </div>
+    		<div class="row">
+    			<div class="col-md-6">
+    				<div class="row">
+		    			<div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
+		            <div class="media block-6 services services-2">
+		              <div class="media-body py-md-4 text-center">
+		              	<div class="icon mb-3 d-flex align-items-center justify-content-center"><span>01</span></div>
+		                <h3>Evaluate Property</h3>
+		                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+		              </div>
+		            </div>      
+		          </div>
+		          <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
+		            <div class="media block-6 services services-2">
+		              <div class="media-body py-md-4 text-center">
+		              	<div class="icon mb-3 d-flex align-items-center justify-content-center"><span>02</span></div>
+		                <h3>Meet Your Agent</h3>
+		                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+		              </div>
+		            </div>      
+		          </div>
+		          <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
+		            <div class="media block-6 services services-2">
+		              <div class="media-body py-md-4 text-center">
+		              	<div class="icon mb-3 d-flex align-items-center justify-content-center"><span>03</span></div>
+		                <h3>Close the Deal</h3>
+		                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+		              </div>
+		            </div>      
+		          </div>
+		          <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
+		            <div class="media block-6 services services-2">
+		              <div class="media-body py-md-4 text-center">
+		              	<div class="icon mb-3 d-flex align-items-center justify-content-center"><span>04</span></div>
+		                <h3>Have Your Property</h3>
+		                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+		              </div>
+		            </div>      
+		          </div>
+		        </div>
+		      </div>
+    		</div>
+    	</div>
+    </section>
+
+    <section class="ftco-section ftco-no-pb">
+			<div class="container">
+				<div class="row no-gutters">
+					<div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/about.jpg);">
+					</div>
+					<div class="col-md-6 wrap-about py-md-5 ftco-animate">
+	          <div class="heading-section p-md-5">
+	            <h2 class="mb-4">We Put People First.</h2>
+
+	            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+	          </div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+    <section class="ftco-section testimony-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center heading-section ftco-animate">
+          	<span class="subheading">Testimonial</span>
+            <h2 class="mb-3">Happy Clients</h2>
+          </div>
+        </div>
+        <div class="row ftco-animate">
+          <div class="col-md-12">
+            <div class="carousel-testimony owl-carousel ftco-owl">
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                  <div class="text">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
+                    	<div class="pl-3">
+		                    <p class="name">Roger Scott</p>
+		                    <span class="position">Marketing Manager</span>
+		                  </div>
+	                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                  <div class="text">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
+                    	<div class="pl-3">
+		                    <p class="name">Roger Scott</p>
+		                    <span class="position">Marketing Manager</span>
+		                  </div>
+	                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                  <div class="text">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/person_3.jpg)"></div>
+                    	<div class="pl-3">
+		                    <p class="name">Roger Scott</p>
+		                    <span class="position">Marketing Manager</span>
+		                  </div>
+	                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                  <div class="text">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
+                    	<div class="pl-3">
+		                    <p class="name">Roger Scott</p>
+		                    <span class="position">Marketing Manager</span>
+		                  </div>
+	                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                  <div class="text">
+                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
+                    	<div class="pl-3">
+		                    <p class="name">Roger Scott</p>
+		                    <span class="position">Marketing Manager</span>
+		                  </div>
+	                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section ftco-no-pt">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+          	<span class="subheading">Blog</span>
+            <h2>Recent Blog</h2>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-3 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <div class="text">
+                <h3 class="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
+                <div class="meta mb-3">
+                  <div><a href="#">July. 24, 2019</a></div>
+                  <div><a href="#">Admin</a></div>
+                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                </div>
+                <a href="blog-single.html" class="block-20 img" style="background-image: url('images/image_1.jpg');">
+	              </a>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <div class="text">
+                <h3 class="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
+                <div class="meta mb-3">
+                  <div><a href="#">July. 24, 2019</a></div>
+                  <div><a href="#">Admin</a></div>
+                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                </div>
+                <a href="blog-single.html" class="block-20 img" style="background-image: url('images/image_2.jpg');">
+	              </a>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <div class="text">
+                <h3 class="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
+                <div class="meta mb-3">
+                  <div><a href="#">July. 24, 2019</a></div>
+                  <div><a href="#">Admin</a></div>
+                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                </div>
+                <a href="blog-single.html" class="block-20 img" style="background-image: url('images/image_3.jpg');">
+	              </a>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <div class="text">
+                <h3 class="heading"><a href="#">Why Lead Generation is Key for Business Growth</a></h3>
+                <div class="meta mb-3">
+                  <div><a href="#">July. 24, 2019</a></div>
+                  <div><a href="#">Admin</a></div>
+                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                </div>
+                <a href="blog-single.html" class="block-20 img" style="background-image: url('images/image_4.jpg');">
+	              </a>
+                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>		
+
+
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
