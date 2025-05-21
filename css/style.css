@@ -6517,7 +6517,7 @@ button.bg-dark:focus {
 
 .mb-5,
 .my-5 {
-  margin-bottom: 3rem !important; }
+  margin-bottom: 0rem !important; }
 
 .ml-5,
 .mx-5 {
@@ -8966,11 +8966,11 @@ textarea.form-control {
   font-size: 24px; }
 
 .ftco-section {
-  padding: 6em 0;
+  padding: 6em 0 2em 0;
   position: relative; }
   @media (max-width: 767.98px) {
     .ftco-section {
-      padding: 6em 0; } }
+      padding: 3em 0; } }
 
 .ftco-no-pt {
   padding-top: 0; }
