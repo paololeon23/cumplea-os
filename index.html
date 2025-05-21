@@ -35,7 +35,6 @@
   <source src="musica.mp3" type="audio/mpeg" />
   Tu navegador no soporta audio HTML5.
 </audio>
-  <!-- END nav -->
 
   <div class="hero-wrap ftco-degree-bg" style="background-image: url('images/bg_1.jpg');"
     data-stellar-background-ratio="0.5">
@@ -719,140 +718,142 @@
   </div>
 
   <style>
-     .contenedor-asistencia {
-    margin: 40px auto;
-    max-width: 485px;
-    padding: 20px;
-    text-align: center;
-  }
+ .contenedor-asistencia {
+  margin: 40px auto;
+  max-width: 485px;
+  padding: 20px;
+  text-align: center;
+}
 
-  .contenedor-asistencia input {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    box-sizing: border-box;
+.contenedor-asistencia input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.botones button {
+  padding: 10px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #dfc040;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.botones button:hover {
+  background-color: #c9aa36;
+}
+
+@media (max-width: 480px) {
+  .contenedor-asistencia {
+    padding: 15px;
+    margin: 20px 10px;
   }
 
   .botones {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
+    flex-direction: column;
   }
 
   .botones button {
-    padding: 10px 16px;
-    font-size: 14px;
-    border: none;
-    border-radius: 6px;
-    background-color: #dfc040;
-    color: #333;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    width: 100%;
   }
+}
 
-  .botones button:hover {
-    background-color: #c9aa36;
-  }
+/* Modal base SOLO para modal asistencia */
+#modalAsistentes {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  padding: 20px;
+  box-sizing: border-box;
+}
 
-  @media (max-width: 480px) {
-    .contenedor-asistencia {
-      padding: 15px;
-      margin: 20px 10px;
-    }
+#modalAsistentes.active {
+  visibility: visible;
+  opacity: 1;
+}
 
-    .botones {
-      flex-direction: column;
-    }
+#modalAsistentes .modal-content1 {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+  text-align: left;
+  box-sizing: border-box;
+}
 
-    .botones button {
-      width: 100%;
-    }
-  }
-    /* Modal base */
-    .modal {
-      visibility: hidden;
-      opacity: 0;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.7);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: opacity 0.3s ease, visibility 0.3s ease;
-      padding: 20px;
-      box-sizing: border-box;
-    }
+#modalAsistentes .modal-content1 h5 {
+  margin: 0;
+}
 
-    .modal.active {
-      visibility: visible;
-      opacity: 1;
-    }
+/* Tabla de asistentes SOLO dentro modalAsistentes */
+#modalAsistentes table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  margin-top: 10px;
+}
 
-    .modal-content1 {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      max-width: 500px;
-      max-height: 80vh;
-      overflow-y: auto;
-      text-align: left;
-      box-sizing: border-box;
-    }
+#modalAsistentes th,
+#modalAsistentes td {
+  padding: 8px;
+  border: 1px solid #ccc;
+}
 
-    .modal-content1 h5 {
-      margin: 0;
-    }
+#modalAsistentes th {
+  background-color: #dfc040;
+  color: white;
+}
 
-    /* Tabla de asistentes */
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      text-align: left;
-      margin-top: 10px;
-    }
+/* Botones de paginación dentro modalAsistentes */
+#modalAsistentes button.pageBtn {
+  background-color: #dfc040;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 5px;
+}
 
-    th,
-    td {
-      padding: 8px;
-      border: 1px solid #ccc;
-    }
+#modalAsistentes button.pageBtn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
 
-    th {
-      background-color: #dfc040;
-      color: white;
-    }
+/* Botón de cerrar modal asistencia */
+#cerrarModalAsistentes {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #555;
+}
 
-    /* Botones de paginación */
-    button.pageBtn {
-      background-color: #dfc040;
-      border: none;
-      padding: 6px 12px;
-      border-radius: 5px;
-      cursor: pointer;
-      margin: 0 5px;
-    }
-
-    button.pageBtn:disabled {
-      opacity: 0.6;
-      cursor: default;
-    }
-
-    /* Botón de cerrar como ícono */
-    #cerrarModalAsistentes {
-      background: none;
-      border: none;
-      font-size: 1.4rem;
-      cursor: pointer;
-      color: #555;
-    }
   </style>
 
 
