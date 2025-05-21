@@ -8242,7 +8242,7 @@ h1, h2, h3, h4, h5,
 .slider-text {
   height: 850px; }
   .slider-text h1 {
-    font-size: 60px;
+    font-size: 57px;
     color: #ffffff;
     line-height: 1.1;
     font-weight: 400; }
@@ -8966,11 +8966,11 @@ textarea.form-control {
   font-size: 24px; }
 
 .ftco-section {
-  padding: 6em 0 2em 0;
+  padding: 6em 0 0em 0;
   position: relative; }
   @media (max-width: 767.98px) {
     .ftco-section {
-      padding: 3em 0; } }
+      padding: 0em 0; } }
 
 .ftco-no-pt {
   padding-top: 0; }
