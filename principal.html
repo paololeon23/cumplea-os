@@ -662,6 +662,9 @@
         margin: 10,
         nav: false,
         dots: true,
+        touchDrag: false,   // ✅ Esto evita que el usuario pueda deslizar
+        mouseDrag: false,   // ✅ Esto evita que el usuario con mouse lo arrastre
+        pullDrag: false, 
         responsive: {
           0: { items: 1 },
           576: { items: 2 },
@@ -683,6 +686,12 @@
       object-fit: cover;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
       margin: auto;
+      pointer-events: none;       /* Evita clics o toques */
+      user-select: none;          /* Evita seleccionar la imagen */
+      -webkit-user-select: none;  /* Soporte para Safari/iOS */
+      -webkit-user-drag: none;    /* Previene arrastrar en Safari */
+      -moz-user-select: none;     /* Firefox */
+      -ms-user-select: none;    
     }
 
     .owl-carousel .animated {
