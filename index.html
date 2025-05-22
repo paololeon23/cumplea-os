@@ -1,1054 +1,186 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-  <title>Uptown - Free Bootstrap 4 Template by Colorlib</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&display=swap"
-    rel="stylesheet">
-
-  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-  <link rel="stylesheet" href="css/animate.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="css/magnific-popup.css">
-
-  <link rel="stylesheet" href="css/aos.css">
-
-  <link rel="stylesheet" href="css/ionicons.min.css">
-
-  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-  <link rel="stylesheet" href="css/jquery.timepicker.css">
-
-
-  <link rel="stylesheet" href="css/flaticon.css">
-  <link rel="stylesheet" href="css/icomoon.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-
-<audio autoplay loop>
-  <source src="musica.mp3" type="audio/mpeg" />
-  Tu navegador no soporta audio HTML5.
-</audio>
-
-  <div class="hero-wrap ftco-degree-bg" style="background-image: url('images/bg_1.jpg');"
-    data-stellar-background-ratio="0.5">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row no-gutters slider-text justify-content-center align-items-center">
-        <div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-end">
-          <div class="text text-center">
-            <h1 class="mb-4">Invitación <br>Especial de Cumpleaños</h1>
-
-            <p style="font-size: 16px;">Quiero compartir contigo un día muy especial lleno de alegría, música y momentos
-              inolvidables. Espero que puedas acompañarme a celebrar esta fecha tan importante.</p>
-
-            <!-- Cuenta regresiva aquí -->
-            <style>
-              #countdown {
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                color: #dfc040;
-                display: flex;
-                justify-content: center;
-                gap: 20px;
-                font-weight: 700;
-                font-size: 24px;
-                margin: 25px 0;
-                flex-wrap: wrap;
-                /* para que en móvil baje */
-              }
-
-              #countdown div {
-                background: rgba(255, 255, 255, 0.1);
-                padding: 4px 14px;
-                border-radius: 10px;
-                min-width: 75px;
-                text-align: center;
-                box-shadow: 0 0 8px #dfc040aa;
-                margin-bottom: 10px;
-              }
-
-              #countdown div span.number {
-                display: block;
-                font-size: 32px;
-                letter-spacing: 1.5px;
-              }
-
-              #countdown div span.label {
-                font-size: 14px;
-                opacity: 0.8;
-                margin-top: 5px;
-                text-transform: uppercase;
-              }
-            </style>
-
-            <div id="countdown">
-              <div><span class="number" id="days">00</span><span class="label">días</span></div>
-              <div><span class="number" id="hours">00</span><span class="label">hrs</span></div>
-              <div><span class="number" id="minutes">00</span><span class="label">min</span></div>
-              <div><span class="number" id="seconds">00</span><span class="label">seg</span></div>
-            </div>
-
-            <form action="#" class="search-location mt-md-5">
-              <div class="row justify-content-center">
-                <div class="col-lg-10 align-items-end">
-                  <div class="form-group">
-                    <!-- Aquí tu formulario o contenido -->
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="mouse">
-      <a href="#" class="mouse-icon">
-        <div class="mouse-wheel"><span class="ion-ios-arrow-round-down"></span></div>
-      </a>
-    </div>
-  </div>
-
-  <script>
-    const birthdayDate = new Date("May 22, 2025 20:00:00").getTime();
-
-    function updateCountdown() {
-      const now = new Date().getTime();
-      const distance = birthdayDate - now;
-
-      if (distance < 0) {
-        document.getElementById("countdown").innerHTML = "¡La fiesta ya comenzó!";
-        clearInterval(interval);
-        return;
-      }
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      document.getElementById("days").textContent = days.toString().padStart(2, '0');
-      document.getElementById("hours").textContent = hours.toString().padStart(2, '0');
-      document.getElementById("minutes").textContent = minutes.toString().padStart(2, '0');
-      document.getElementById("seconds").textContent = seconds.toString().padStart(2, '0');
-    }
-
-    updateCountdown();
-    const interval = setInterval(updateCountdown, 1000);
-  </script>
-
-
-  <section class="ftco-section ftco-no-pb">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-12 heading-section text-center ftco-animate mb-5">
-          <span class="subheading">Antes de venir a la fiesta</span>
-          <h2 class="mb-2">Lo que no puedes olvidar</h2>
-        </div>
-      </div>
-      <div class="row d-flex">
-        <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-          <div class="media block-6 services d-block text-center">
-            <div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-piggy-bank"></span>
-            </div>
-            <div class="media-body py-md-4">
-              <h3>Compra tu energía</h3>
-              <p>Prepara tu cuerpo para la fiesta, ¡sin quedarte sin pilas!</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-          <div class="media block-6 services d-block text-center">
-            <div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-wallet"></span>
-            </div>
-            <div class="media-body py-md-4">
-              <h3>Prepara tu outfit</h3>
-              <p>Elige el mejor traje o vestido para destacar en la fiesta.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-          <div class="media block-6 services d-block text-center">
-            <div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-file"></span></div>
-            <div class="media-body py-md-4">
-              <h3>Organiza tus regalos</h3>
-              <p>No olvides el detalle perfecto para compartir alegría.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-          <div class="media block-6 services d-block text-center">
-            <div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-locked"></span>
-            </div>
-            <div class="media-body py-md-4">
-              <h3>Asegura tu lugar</h3>
-              <p>Confirma tu asistencia para que no te pierdas la celebración.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="ftco-section goto-here">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-12 heading-section text-center ftco-animate mb-5">
-          <span class="subheading">Todo listo para la fiesta</span>
-          <h2 class="mb-2">Tu guía para llegar, regalar y divertirte</h2>
-        </div>
-      </div>
-
-      <div class="row">
-        <!-- Card con botón que abre el modal -->
-        <div class="col-md-4">
-          <div class="property-wrap ftco-animate">
-            <a href="#" class="img" style="background-image: url(images/work-1.jpg);" data-toggle="modal"
-              data-target="#modalMapa"></a>
-            <div class="text">
-
-              <h3><a href="#" data-toggle="modal" data-target="#modalMapa">Verifica cómo llegar</a></h3>
-              <span class="location">Calle Jorge Huston #280 — Trujillo </span>
-              <a href="#" class="d-flex align-items-center justify-content-center btn-custom" data-toggle="modal"
-                data-target="#modalMapa">
-                <span class="ion-ios-link"></span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- Modal que muestra el mapa -->
-        <div class="modal fade" id="modalMapa" tabindex="-1" role="dialog" aria-labelledby="modalMapaLabel"
-          aria-hidden="true">
-          <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="modalMapaLabel">¿Cómo llegar? — Jorge Huston 280, Trujillo</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body p-0">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.9312415597137!2d-79.03945871599122!3d-8.10848396027303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad3d9bb6960ecb%3A0x46b6d2458997de03!2sC.%20Jorge%20Ch%C3%A1vez%20360%2C%20Trujillo%2013011!5e0!3m2!1ses-419!2spe!4v1747715836609!5m2!1ses-419!2spe"
-                  width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="property-wrap ftco-animate">
-            <a href="#" class="img" id="openYapeModalImg" style="background-image: url(images/work-2.jpg);"></a>
-            <div class="text">
-              <h3><a href="#" id="openYapeModalTitle">Envía tu regalo fácilmente</a></h3>
-              <span class="location">¿No te dio tiempo de comprar regalo?</span>
-              <a href="#" class="d-flex align-items-center justify-content-center btn-custom" id="openYapeModalIcon">
-                <span class="ion-ios-link"></span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-
-        <!-- Modal -->
-        <div id="yapeModal">
-          <div class="modal-content1">
-            <h2 id="yapeletra">Envía tu regalo con Yape</h2>
-            <img src="images/YAPE.jpeg" alt="Yape QR">
-            <p><strong>Número a yapear:</strong> 91352482</p>
-            <p><strong>Nombre:</strong> José Pedro Muñiz</p>
-            <button id="closeYapeModal">Cerrar</button>
-          </div>
-        </div>
-
-        <script>
-          const modal = document.getElementById('yapeModal');
-
-          const openModal = (e) => {
-            e.preventDefault();
-            modal.classList.add('active');
-          };
-
-          const closeModal = () => {
-            modal.classList.remove('active');
-          };
-
-          document.getElementById('openYapeModalBtn')?.addEventListener('click', openModal);
-          document.getElementById('openYapeModalIcon').addEventListener('click', openModal);
-          document.getElementById('openYapeModalImg').addEventListener('click', openModal);
-          document.getElementById('openYapeModalTitle').addEventListener('click', openModal);
-
-          document.getElementById('closeYapeModal').addEventListener('click', closeModal);
-
-          window.onclick = function (event) {
-            if (event.target === modal) {
-              closeModal();
-            }
-          };
-        </script>
-
-        <style>
-          #yapeModal {
-            visibility: hidden;
-            opacity: 0;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.7);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Página Principal</title>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
             box-sizing: border-box;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-          }
-
-          #yapeModal.active {
-            visibility: visible;
-            opacity: 1;
-          }
-
-          /* Contenido del modal */
-          .modal-content1 {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 27%;
-            max-height: 80vh;
-            overflow-y: auto;
-            text-align: center;
-            position: relative;
-            box-sizing: border-box;
-          }
-
-          /* Imagen */
-          .modal-content1 img {
-            display: block;
-            max-width: 92%;
-            height: auto;
-            margin: 20px auto;
-            /* centra la imagen horizontalmente */
-            border-radius: 3%;
-          }
-
-          /* Botón cerrar */
-          #closeYapeModal {
-            padding: 10px 20px;
-            background-color: #dfc040;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-            margin: auto;
-          }
-
-          #closeYapeModal:hover {
-            background-color: #c0a830;
-          }
-
-          /* Responsive para móvil */
-          @media (max-width: 576px) {
-            .modal-content1 {
-              max-width: 90%;
-              max-height: 80vh;
-              padding: 20px;
-              margin: 40% auto;
-            }
-
-            #yapeModal {
-              padding: 10px;
-            }
-
-            #closeYapeModal {
-              max-width: 100%;
-              font-size: 1rem;
-              padding: 8px 44px;
-              margin: auto;
-              margin-top: 6px;
-            }
-          }
-
-          @media (max-width: 576px) {
-            #yapeModal h2 {
-              font-size: 25px;
-              /* tamaño más pequeño para móvil */
-            }
-
-            #yapeModal p {
-              font-size: 16px;
-            }
-          }
-        </style>
-
-
-        <div class="col-md-4">
-          <div class="property-wrap ftco-animate">
-            <a href="#" class="img" id="openWhatsappModalImg" style="background-image: url(images/work-3.jpg);"></a>
-            <div class="text">
-              <h3><a href="#" id="openWhatsappModalTitle">Sube todas las fotos durante la fiesta</a></h3>
-              <span class="location">Grupo WhatsApp Fiesta</span>
-              <a href="#" class="d-flex align-items-center justify-content-center btn-custom"
-                id="openWhatsappModalIcon">
-                <span class="ion-ios-link"></span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modal WhatsApp -->
-        <div id="whatsappModal">
-          <div id="whatsappModalContent">
-            <h2>¡Únete al grupo de WhatsApp!</h2>
-            <p>Sube todas las fotos durante la fiesta al grupo de WhatsApp para compartirlas con todos.</p>
-
-            <button id="joinGroupBtn">Unirme automáticamente</button>
-            <button id="shareLinkBtn">Compartir enlace</button>
-            <button id="closeWhatsappModal">Cancelar</button>
-          </div>
-        </div>
-
-        <script>
-          const whatsappModal = document.getElementById('whatsappModal');
-
-          const openWhatsappModal = (e) => {
-            e.preventDefault();
-            whatsappModal.classList.add('active');
-          };
-
-          const closeWhatsappModal = () => {
-            whatsappModal.classList.remove('active');
-          };
-
-          document.getElementById('openWhatsappModalImg')?.addEventListener('click', openWhatsappModal);
-          document.getElementById('openWhatsappModalTitle')?.addEventListener('click', openWhatsappModal);
-          document.getElementById('openWhatsappModalIcon')?.addEventListener('click', openWhatsappModal);
-
-          document.getElementById('closeWhatsappModal').addEventListener('click', closeWhatsappModal);
-
-          window.onclick = function (event) {
-            if (event.target === whatsappModal) {
-              closeWhatsappModal();
-            }
-          };
-
-          document.getElementById('joinGroupBtn').addEventListener('click', () => {
-            window.open('https://chat.whatsapp.com/LDXVuBtUWLWCSNTWrFU9ZF', '_blank');
-          });
-
-          document.getElementById('shareLinkBtn').addEventListener('click', () => {
-            if (navigator.share) {
-              navigator.share({
-                title: 'Únete al grupo de WhatsApp de la fiesta',
-                text: 'Sube todas las fotos durante la fiesta al grupo de WhatsApp.',
-                url: 'https://chat.whatsapp.com/LDXVuBtUWLWCSNTWrFU9ZF',
-              }).catch((error) => console.log('Error al compartir:', error));
-            } else {
-              alert('Tu navegador no soporta la función de compartir automáticamente. Copia este enlace: https://chat.whatsapp.com/LDXVuBtUWLWCSNTWrFU9ZF');
-            }
-          });
-        </script>
-
-        </script>
-
-        <style>
-          #whatsappModal {
-            visibility: hidden;
-            opacity: 0;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.7);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            box-sizing: border-box;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-          }
-
-          #whatsappModal.active {
-            visibility: visible;
-            opacity: 1;
-          }
-
-          /* Contenido del modal */
-          #whatsappModalContent {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 40%;
-            max-height: 80vh;
-            overflow-y: auto;
-            text-align: center;
-            position: relative;
-            box-sizing: border-box;
-          }
-
-          /* Botones */
-          #whatsappModalContent button {
-            width: 100%;
-            padding: 12px 20px;
-            margin-bottom: 10px;
-            font-weight: bold;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-          }
-
-          #joinGroupBtn {
-            background-color: #25D366;
-            color: white;
-          }
-
-          #shareLinkBtn {
-            background-color: #128C7E;
-            color: white;
-          }
-
-          #closeWhatsappModal {
-            background-color: #ccc;
-          }
-
-          /* Responsive para móvil */
-          @media (max-width: 576px) {
-            #whatsappModalContent {
-              max-width: 100%;
-              margin: 40% auto;
-              padding: 20px;
-            }
-
-            #whatsappModal h2 {
-              font-size: 25px;
-            }
-
-            #whatsappModal p {
-              font-size: 16px;
-              margin-bottom: 15px;
-            }
-
-            #whatsappModalContent button {
-              font-size: 1rem;
-              padding: 12px 0;
-            }
-          }
-        </style>
-
-      </div>
-    </div>
-  </section>
-
-
-
-  <section id="ftco-no-pb" class="ftco-section ftco-no-pb">
-    <div class="container">
-      <div class="row no-gutters">
-        <div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-center about-image"></div>
-        <div class="col-md-6 wrap-about py-md-5 ftco-animate">
-          <div class="heading-section p-md-5">
-            <h2 class="mb-4">Te deseo lo mejor ❤️</h2>
-            <p class="message-text">
-              Como <strong>Pedro Morales</strong>, de corazón deseo que llegues a disfrutar esta experiencia al máximo
-              🙌.<br><br>
-              Que lo pases increíble, que rías, que bailes, que vivas el momento. Y por favor... <strong>¡no te olvides
-                de etiquetarme!</strong><br><br>
-              <span class="etiqueta">@pedro024 📸</span>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <style>
-    /* Aplica solo a esta sección */
-    #ftco-no-pb.ftco-section {
-      padding: 0em 0 0em 0;
-      position: relative;
-    }
-
-    /* Imagen de fondo */
-    .about-image {
-      background-image: url('images/about.jpg');
-      background-size: cover;
-      background-position: center;
-    }
-
-    /* Texto del mensaje */
-    .message-text {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      color: #333;
-    }
-
-    /* Estilo para la etiqueta @pedro024 */
-    .etiqueta {
-      display: inline-block;
-      background-color: #f2f2f2;
-      padding: 10px 15px;
-      border-radius: 8px;
-      font-weight: bold;
-      color: #000;
-    }
-  </style>
-
-
-  <section class="ftco-section testimony-section">
-    <div class="container">
-      <div class="row justify-content-center mb-5">
-        <div class="col-md-7 text-center heading-section ftco-animate">
-          <span class="subheading">Recuerdos</span>
-          <h2 class="mb-3">Así la pasamos el año pasado</h2>
-        </div>
-      </div>
-      <div class="row ftco-animate">
-        <div class="col-md-12">
-          <div id="fotos1" class="carousel-testimony owl-carousel ftco-owl">
-            <div class="item">
-              <img src="images/cumple5.jpeg" alt="Cumpleaños" class="carousel-photo">
-            </div>
-            <div class="item">
-              <img src="images/cumple6.jpeg" alt="Cumpleaños" class="carousel-photo">
-            </div>
-            <div class="item">
-              <img src="images/cumple7.jpeg" alt="Cumpleaños" class="carousel-photo">
-            </div>
-            <div class="item">
-              <img src="images/cumple5.jpeg" alt="Cumpleaños" class="carousel-photo">
-            </div>
-            <div class="item">
-              <img src="images/cumple6.jpeg" alt="Cumpleaños" class="carousel-photo">
-            </div>
-            <div class="item">
-              <img src="images/cumple7.jpeg" alt="Cumpleaños" class="carousel-photo">
-            </div>
-            <div class="item">
-              <img src="images/cumple8.jpeg" alt="Cumpleaños" class="carousel-photo">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <script>
-    // Espera a que todo esté completamente cargado (incluyendo imágenes)
-    window.onload = function () {
-      var owl = $('#fotos1');
-      owl.owlCarousel({
-        loop: true,
-        autoplay: true,
-        autoplayTimeout: 3000,
-        autoplaySpeed: 800,
-        smartSpeed: 800,
-        margin: 10,
-        nav: false,
-        dots: true,
-        responsive: {
-          0: { items: 1 },
-          576: { items: 2 },
-          992: { items: 3 }
+            font-family: 'Arial', sans-serif;
         }
-      });
 
-      // Fuerza el autoplay si sigue sin funcionar
-      owl.trigger('play.owl.autoplay', [3000]);
-    };
-  </script>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #000000, #cb9149);
+            background-size: 200% 200%;
+            animation: gradientMove 10s ease infinite;
+        }
 
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
 
+        .background-character {
+            position: absolute;
+            bottom: 52%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+            width: 250px;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            opacity: 0.95;
+            animation: moveUpDown 4s ease-in-out infinite;
+        }
 
-  <style>
-    .carousel-photo {
-      width: 100%;
-      height: 400px;
-      object-fit: cover;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-      margin: auto;
-    }
+        @keyframes moveUpDown {
+            0%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            50% {
+                transform: translateX(-50%) translateY(-20px);
+            }
+        }
 
-    .owl-carousel .animated {
-      animation-duration: 1000ms !important;
-    }
-  </style>
+        .character-img {
+            max-width: 100%;
+            max-height: 127%;
+            object-fit: contain;
+        }
 
-<!-- CONTENEDOR -->
-<div class="contenedor-asistencia">
-  <div class="col-md-12 text-center heading-section ftco-animate">
-          <span class="subheading">Asistencia</span>      
-  <input type="text" id="nombreAsistente" placeholder="Escribe tu nombre" autocomplete="off" />
+        .login-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.97);
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+            padding: 35px;
+            width: 100%;
+            max-width: 400px;
+            position: relative;
+            z-index: 2;
+            margin-top: 100px;
+            backdrop-filter: blur(6px);
+        }
 
-  <div class="botones">
-    <button id="btnConfirmarAsistencia">Confirmar</button>
-    <button id="abrirModalAsistentes">Lista</button>
-  </div>
-  </div>
-</div>
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #cb9149;
+            margin-bottom: 10px;
+        }
 
+        .login-form {
+            width: 100%;
+            margin-top: 20px;
+        }
 
-  <!-- Modal personalizado -->
-  <div id="modalAsistentes" class="modal">
-    <div class="modal-content1">
-      <div style="display:flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
-        <h5 style="margin:0;">Lista de Asistentes</h5>
-        <button id="cerrarModalAsistentes"
-          style="background:none; border:none; font-size: 1.4rem; cursor:pointer; color:#555;"
-          aria-label="Cerrar modal">✖</button>
-      </div>
-      <div id="listaAsistentes">Cargando asistentes...</div>
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        input[type="password"] {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border 0.3s;
+        }
+
+        input[type="password"]:focus {
+            outline: none;
+            border-color: #cb9149;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #cb9149;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .login-btn:hover {
+            background-color: #b2793c;
+        }
+
+        @media (max-width: 480px) {
+            .background-character {
+                width: 180px;
+                height: 180px;
+                bottom: 52%;
+            }
+
+            .login-container {
+                padding: 20px;
+                margin-top: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Personaje -->
+    <div class="background-character">
+        <img src="images/imagen1.png" alt="Personaje" class="character-img" />
     </div>
-  </div>
 
-  <style>
- .contenedor-asistencia {
-  margin: 40px auto;
-  max-width: 485px;
-  padding: 20px;
-  text-align: center;
-}
-
-.contenedor-asistencia input {
-  width: 100%;
-  padding: 12px;
-  font-size: 16px;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  box-sizing: border-box;
-}
-
-.botones {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.botones button {
-  padding: 10px 16px;
-  font-size: 14px;
-  border: none;
-  border-radius: 6px;
-  background-color: #dfc040;
-  color: #333;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.botones button:hover {
-  background-color: #c9aa36;
-}
-
-@media (max-width: 480px) {
-  .contenedor-asistencia {
-    padding: 15px;
-    margin: 20px 10px;
-  }
-
-  .botones {
-    flex-direction: column;
-  }
-
-  .botones button {
-    width: 100%;
-  }
-}
-
-/* Modal base SOLO para modal asistencia */
-#modalAsistentes {
-  visibility: hidden;
-  opacity: 0;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-#modalAsistentes.active {
-  visibility: visible;
-  opacity: 1;
-}
-
-#modalAsistentes .modal-content1 {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 500px;
-  max-height: 80vh;
-  overflow-y: auto;
-  text-align: left;
-  box-sizing: border-box;
-}
-
-#modalAsistentes .modal-content1 h5 {
-  margin: 0;
-}
-
-/* Tabla de asistentes SOLO dentro modalAsistentes */
-#modalAsistentes table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
-  margin-top: 10px;
-}
-
-#modalAsistentes th,
-#modalAsistentes td {
-  padding: 8px;
-  border: 1px solid #ccc;
-}
-
-#modalAsistentes th {
-  background-color: #dfc040;
-  color: white;
-}
-
-/* Botones de paginación dentro modalAsistentes */
-#modalAsistentes button.pageBtn {
-  background-color: #dfc040;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 0 5px;
-}
-
-#modalAsistentes button.pageBtn:disabled {
-  opacity: 0.6;
-  cursor: default;
-}
-
-/* Botón de cerrar modal asistencia */
-#cerrarModalAsistentes {
-  background: none;
-  border: none;
-  font-size: 1.4rem;
-  cursor: pointer;
-  color: #555;
-}
-
-  </style>
-
-
-  <footer class="footer bg-dark text-white text-center py-4 mt-5">
-    <div class="container">
-      <p class="mb-1" style="font-size: 1.2rem;">¡Gracias por ser parte de este hermoso recuerdo!</p>
-      <small class="text-muted">© 2025 Todos los derechos reservados.</small>
-    </div>
-  </footer>
-
-  <style>
-    .footer {
-      background-color: #000000 !important;
-      color: white;
-      padding: 2rem 1rem;
-      text-align: center;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    .footer small {
-      color: #ccc;
-    }
-  </style>
-
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
-      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
-      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
-        stroke="#F96D00" />
-    </svg></div>
-
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/bootstrap-datepicker.js"></script>
-  <script src="js/jquery.timepicker.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
-  <script src="js/main.js"></script>
-
-
-  <script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.0/firebase-app.js";
-  import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebasejs/11.8.0/firebase-database.js";
-
-  const firebaseConfig = {
-    apiKey: "AIzaSyA8A01rK-w8juI6dm2eMmL12g_4gabRp_I",
-    authDomain: "fiesta-a9e2a.firebaseapp.com",
-    projectId: "fiesta-a9e2a",
-    storageBucket: "fiesta-a9e2a.appspot.com",
-    messagingSenderId: "7196449755",
-    appId: "1:7196449755:web:a85f9648acce79417125fe",
-    measurementId: "G-VCRWM4YWPN"
-  };
-
-  const app = initializeApp(firebaseConfig);
-  const database = getDatabase(app);
-
-  document.addEventListener('DOMContentLoaded', () => {
-    const btnConfirmar = document.getElementById('btnConfirmarAsistencia');
-    const nombreInput = document.getElementById('nombreAsistente');
-    const modal = document.getElementById('modalAsistentes');
-    const abrirModalBtn = document.getElementById('abrirModalAsistentes');
-    const cerrarModalBtn = document.getElementById('cerrarModalAsistentes');
-    const listaDiv = document.getElementById('listaAsistentes');
-
-    btnConfirmar.addEventListener('click', () => {
-      const nombre = nombreInput.value.trim();
-      if (!nombre) {
-        Swal.fire({
-          icon: 'warning',
-          title: 'Campo vacío',
-          text: 'Por favor, ingresa tu nombre antes de confirmar.',
-          confirmButtonColor: '#dfc040'
-        });
-        return;
-      }
-
-      const confirmadosRef = ref(database, 'confirmados');
-      push(confirmadosRef, {
-        nombre,
-        fecha: new Date().toISOString()
-      }).then(() => {
-        Swal.fire({
-          icon: 'success',
-          title: '¡Gracias!',
-          text: 'Asistencia confirmada con éxito.',
-          timer: 2000,
-          showConfirmButton: false
-        });
-        nombreInput.value = '';
-      }).catch(error =>
-        Swal.fire({
-          icon: 'error',
-          title: 'Error',
-          text: 'No se pudo registrar la asistencia: ' + error,
-        })
-      );
-    });
-
-    const confirmadosRef = ref(database, 'confirmados');
-    onValue(confirmadosRef, (snapshot) => {
-      const data = snapshot.val();
-      if (!data) {
-        listaDiv.innerHTML = '<p>No hay asistentes registrados.</p>';
-        return;
-      }
-      const asistentes = Object.values(data);
-      asistentes.sort((a, b) => new Date(b.fecha) - new Date(a.fecha));
-      renderTablaAsistentes(asistentes, 1, 10);
-    });
-
-    abrirModalBtn.addEventListener('click', () => {
-      modal.classList.add('active');
-    });
-
-    cerrarModalBtn.addEventListener('click', () => {
-      modal.classList.remove('active');
-    });
-
-    window.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.classList.remove('active');
-      }
-    });
-
-    function renderTablaAsistentes(asistentes, pagina = 1, porPagina = 10) {
-      const total = asistentes.length;
-      const totalPaginas = Math.ceil(total / porPagina);
-      if (pagina > totalPaginas) pagina = totalPaginas;
-      if (pagina < 1) pagina = 1;
-
-      const inicio = (pagina - 1) * porPagina;
-      const fin = inicio + porPagina;
-      const asistentesPagina = asistentes.slice(inicio, fin);
-
-      let html = `
-        <table style="width:100%; border-collapse:collapse;">
-          <thead>
-            <tr>
-              <th style="border-bottom:1px solid #ccc;">Nombre</th>
-              <th style="border-bottom:1px solid #ccc;">Hora</th>
-            </tr>
-          </thead>
-          <tbody>
-      `;
-
-      asistentesPagina.forEach((a) => {
-        const hora = a.fecha
-          ? new Date(a.fecha).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
-          : '';
-        html += `
-          <tr>
-            <td>${a.nombre}</td>
-            <td>${hora}</td>
-          </tr>
-        `;
-      });
-
-      html += '</tbody></table>';
-
-      html += `
-        <div style="margin-top: 15px; text-align: center;">
-          <button class="pageBtn" ${pagina === 1 ? 'disabled' : ''} id="btnPrev">Anterior</button>
-          <span>Página ${pagina} de ${totalPaginas}</span>
-          <button class="pageBtn" ${pagina === totalPaginas ? 'disabled' : ''} id="btnNext">Siguiente</button>
+    <!-- Modal de login -->
+    <div class="login-container">
+        <div class="logo">Bienvenido</div>
+        <div class="login-form">
+            <div class="input-group">
+                <input type="password" id="passwordInput" placeholder="Contraseña" />
+            </div>
+            <button class="login-btn" onclick="validarLogin()">Login</button>
         </div>
-      `;
+    </div>
 
-      listaDiv.innerHTML = html;
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        function validarLogin() {
+            const password = document.getElementById("passwordInput").value.trim();
+            const passwordCorrecta = "70839370"; // Contraseña actualizada
 
-      document.getElementById('btnPrev')?.addEventListener('click', () => {
-        renderTablaAsistentes(asistentes, pagina - 1, porPagina);
-      });
-      document.getElementById('btnNext')?.addEventListener('click', () => {
-        renderTablaAsistentes(asistentes, pagina + 1, porPagina);
-      });
-    }
-  });
-</script>
-
-
-
+            if (!password) {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Campo vacío',
+                    text: 'Por favor, ingresa tu contraseña.',
+                    footer: '<small>La información es privada, no la compartas con nadie.</small>',
+                    confirmButtonColor: '#cb9149'
+                });
+            } else if (password !== passwordCorrecta) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Contraseña incorrecta',
+                    text: 'La contraseña que ingresaste no es válida.',
+                    footer: '<small>Todo es privado, no debes mandar la información a nadie.</small>',
+                    confirmButtonColor: '#cb9149'
+                });
+            } else {
+                window.location.href = 'principal.html'; // Página de destino
+            }
+        }
+    </script>
 </body>
-
 </html>
