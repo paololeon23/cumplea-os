@@ -158,29 +158,29 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         function validarLogin() {
-            const password = document.getElementById("passwordInput").value.trim();
-            const passwordCorrecta = "70839370"; // Contraseña actualizada
+    const password = document.getElementById("passwordInput").value.trim();
+    const passwordCorrecta = "70839370";
 
-            if (!password) {
-                Swal.fire({
-                    icon: 'warning',
-                    title: 'Campo vacío',
-                    text: 'Por favor, ingresa tu contraseña.',
-                    footer: '<small>La información es privada, no la compartas con nadie.</small>',
-                    confirmButtonColor: '#cb9149'
-                });
-            } else if (password !== passwordCorrecta) {
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Contraseña incorrecta',
-                    text: 'La contraseña que ingresaste no es válida.',
-                    footer: '<small>Todo es privado, no debes mandar la información a nadie.</small>',
-                    confirmButtonColor: '#cb9149'
-                });
-            } else {
-                window.location.href = 'principal.html'; // Página de destino
-            }
-        }
+    if (!password) {
+        Swal.fire({
+            icon: 'warning',
+            title: 'Campo vacío',
+            text: 'Por favor, ingresa tu contraseña.',
+            confirmButtonColor: '#cb9149'
+        });
+    } else if (password !== passwordCorrecta) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Contraseña incorrecta',
+            text: 'La contraseña que ingresaste no es válida.',
+            confirmButtonColor: '#cb9149'
+        });
+    } else {
+        // Guarda un permiso para reproducir música
+        sessionStorage.setItem("permitirMusica", "true");
+        window.location.href = 'principal.html';
+    }
+}
     </script>
 </body>
 </html>

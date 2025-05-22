@@ -31,11 +31,27 @@
 
 <body>
 
-<audio autoplay loop>
-  <source src="musica.mp3" type="audio/mpeg" />
-  Tu navegador no soporta audio HTML5.
-</audio>
+  <audio id="backgroundMusic" autoplay>
+    <source src="musica.mp3" type="audio/mpeg" />
+    Tu navegador no soporta audio HTML5.
+  </audio>
+  
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const permitir = sessionStorage.getItem("permitirMusica");
+      const music = document.getElementById("backgroundMusic");
 
+      if (permitir === "true" && music) {
+        // Intenta reproducir la música
+        music.play().catch(err => {
+          console.warn("Autoplay bloqueado. El usuario debe hacer clic:", err);
+        });
+        // Borra el permiso para evitar que suene en futuras visitas sin login
+        sessionStorage.removeItem("permitirMusica");
+      }
+    });
+  </script>
+  
   <div class="hero-wrap ftco-degree-bg" style="background-image: url('images/bg_1.jpg'); background-attachment: fixed; background-size: cover; background-position: center;">
     <div class="overlay"></div>
     <div class="container">
