@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Página Principal</title>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #000000, #cb9149);
+            background-size: 200% 200%;
+            animation: gradientMove 10s ease infinite;
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .background-character {
+            position: absolute;
+            bottom: 52%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+            width: 250px;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            opacity: 0.95;
+            animation: moveUpDown 4s ease-in-out infinite;
+        }
+
+        @keyframes moveUpDown {
+            0%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            50% {
+                transform: translateX(-50%) translateY(-20px);
+            }
+        }
+
+        .character-img {
+            max-width: 100%;
+            max-height: 127%;
+            object-fit: contain;
+        }
+
+        .login-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.97);
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+            padding: 35px;
+            width: 100%;
+            max-width: 400px;
+            position: relative;
+            z-index: 2;
+            margin-top: 100px;
+            backdrop-filter: blur(6px);
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #cb9149;
+            margin-bottom: 10px;
+        }
+
+        .login-form {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        input[type="password"] {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border 0.3s;
+        }
+
+        input[type="password"]:focus {
+            outline: none;
+            border-color: #cb9149;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #cb9149;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .login-btn:hover {
+            background-color: #b2793c;
+        }
+
+        @media (max-width: 480px) {
+            .background-character {
+                width: 180px;
+                height: 180px;
+                bottom: 52%;
+            }
+
+            .login-container {
+                padding: 20px;
+                margin-top: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Personaje -->
+    <div class="background-character">
+        <img src="images/imagen1.png" alt="Personaje" class="character-img" />
+    </div>
+
+    <!-- Modal de login -->
+    <div class="login-container">
+        <div class="logo">Bienvenido</div>
+        <div class="login-form">
+            <div class="input-group">
+                <input type="password" id="passwordInput" placeholder="Contraseña" />
+            </div>
+            <button class="login-btn" onclick="validarLogin()">Login</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        function validarLogin() {
+            const password = document.getElementById("passwordInput").value.trim();
+            const passwordCorrecta = "70839370"; // Contraseña actualizada
+
+            if (!password) {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Campo vacío',
+                    text: 'Por favor, ingresa tu contraseña.',
+                    footer: '<small>La información es privada, no la compartas con nadie.</small>',
+                    confirmButtonColor: '#cb9149'
+                });
+            } else if (password !== passwordCorrecta) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Contraseña incorrecta',
+                    text: 'La contraseña que ingresaste no es válida.',
+                    footer: '<small>Todo es privado, no debes mandar la información a nadie.</small>',
+                    confirmButtonColor: '#cb9149'
+                });
+            } else {
+                window.location.href = 'index.html'; // Página de destino
+            }
+        }
+    </script>
+</body>
+</html>
