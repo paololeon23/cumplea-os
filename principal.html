@@ -31,27 +31,118 @@
 
 <body>
 
-  <audio id="backgroundMusic" autoplay>
-    <source src="musica.mp3" type="audio/mpeg" />
-    Tu navegador no soporta audio HTML5.
-  </audio>
-  
-  <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      const permitir = sessionStorage.getItem("permitirMusica");
-      const music = document.getElementById("backgroundMusic");
+  <!-- Audio oculto -->
+  <audio id="miAudio" src="musica.mp3" preload="auto"></audio>
 
-      if (permitir === "true" && music) {
-        // Intenta reproducir la música
-        music.play().catch(err => {
-          console.warn("Autoplay bloqueado. El usuario debe hacer clic:", err);
-        });
-        // Borra el permiso para evitar que suene en futuras visitas sin login
-        sessionStorage.removeItem("permitirMusica");
+  <!-- Botón flotante play/pausa -->
+  <div id="btnPlayPausa" onclick="alternarPlayPausa()">
+    <div id="bgPlayPausa"></div>
+    <div id="iconPlayPausa">
+      <div id="barra1"></div>
+      <div id="barra2"></div>
+    </div>
+    <div id="trianguloPlay"></div>
+  </div>
+
+  <script>
+    const audio = document.getElementById('miAudio');
+    const icono = document.getElementById('iconPlayPausa');
+    const triangulo = document.getElementById('trianguloPlay');
+
+    function alternarPlayPausa() {
+      if (audio.paused) {
+        audio.play();
+        icono.style.display = 'flex';    // Mostrar icono de pausa
+        triangulo.style.display = 'none'; // Ocultar icono de play
+      } else {
+        audio.pause();
+        icono.style.display = 'none';    // Ocultar icono de pausa
+        triangulo.style.display = 'block'; // Mostrar icono de play
       }
-    });
+    }
+
+    // Estado inicial
+    icono.style.display = 'none';
+    triangulo.style.display = 'block';
   </script>
-  
+
+
+  <style>
+    #btnPlayPausa {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 999;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#btnPlayPausa:hover {
+  transform: scale(1.1);
+}
+
+#bgPlayPausa {
+  width: 100%;
+  height: 100%;
+  background: #dfc040;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+#iconPlayPausa {
+  position: absolute;
+  top: 26%;
+  left: 32%;
+  width: 36%;
+  height: 48%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+#barra1,
+#barra2 {
+  width: 28%;
+  height: 100%;
+  background-color: white;
+  border-radius: 1px;
+}
+
+#trianguloPlay {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 16px solid white;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  top: 32%;
+  left: 34%;
+  z-index: 2;
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  #btnPlayPausa {
+    width: 45px;
+    height: 45px;
+  }
+
+  #trianguloPlay {
+    border-left: 14px solid white;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    top: 33%;
+    left: 35%;
+  }
+}
+
+  </style>
+
   <div class="hero-wrap ftco-degree-bg" style="background-image: url('images/bg_1.jpg'); background-attachment: fixed; background-size: cover; background-position: center;">
     <div class="overlay"></div>
     <div class="container">
@@ -100,6 +191,14 @@
                 margin-top: 5px;
                 text-transform: uppercase;
               }
+
+              @media (max-width: 768px) {
+                .hero-wrap {
+                  background-attachment: scroll !important;
+                }
+              }
+
+
             </style>
 
             <div id="countdown">
@@ -131,7 +230,7 @@
   </div>
 
   <script>
-    const birthdayDate = new Date("May 22, 2025 20:00:00").getTime();
+    const birthdayDate = new Date("May 25, 2025 20:00:00").getTime();
 
     function updateCountdown() {
       const now = new Date().getTime();
