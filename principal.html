@@ -263,7 +263,7 @@
   </div>
 
   <script>
-    const birthdayDate = new Date("May 25, 2025 20:00:00").getTime();
+    const birthdayDate = new Date("Jun 02, 2025 20:00:00").getTime();
 
     function updateCountdown() {
       const now = new Date().getTime();
@@ -828,189 +828,189 @@
 
 
   <style>
-    .carousel-photo {
-      width: 100%;
-      height: 400px;
-      object-fit: cover;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-      margin: auto;
-      pointer-events: none;       /* Evita clics o toques */
-      user-select: none;          /* Evita seleccionar la imagen */
-      -webkit-user-select: none;  /* Soporte para Safari/iOS */
-      -webkit-user-drag: none;    /* Previene arrastrar en Safari */
-      -moz-user-select: none;     /* Firefox */
-      -ms-user-select: none;    
-    }
+        .carousel-photo {
+          width: 100%;
+          height: 400px;
+          object-fit: cover;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+          margin: auto;
+          pointer-events: none;       /* Evita clics o toques */
+          user-select: none;          /* Evita seleccionar la imagen */
+          -webkit-user-select: none;  /* Soporte para Safari/iOS */
+          -webkit-user-drag: none;    /* Previene arrastrar en Safari */
+          -moz-user-select: none;     /* Firefox */
+          -ms-user-select: none;    
+        }
 
-    .owl-carousel .animated {
-      animation-duration: 1000ms !important;
-    }
-  </style>
+        .owl-carousel .animated {
+          animation-duration: 1000ms !important;
+        }
+      </style>
 
-<!-- CONTENEDOR -->
-<div class="contenedor-asistencia">
-  <div class="col-md-12 text-center heading-section ftco-animate">
-          <span class="subheading">Asistencia</span>      
-  <input type="text" id="nombreAsistente" placeholder="Escribe tu nombre" autocomplete="off" />
+    <!-- CONTENEDOR -->
+    <div class="contenedor-asistencia">
+      <div class="col-md-12 text-center heading-section ftco-animate">
+              <span class="subheading">Asistencia</span>      
+      <input type="text" id="nombreAsistente" placeholder="Escribe tu nombre" autocomplete="off" />
 
-  <div class="botones">
-    <button id="btnConfirmarAsistencia">Confirmar</button>
-    <button id="abrirModalAsistentes">Lista</button>
-  </div>
-  </div>
-</div>
-
-
-  <!-- Modal personalizado -->
-  <div id="modalAsistentes" class="modal">
-    <div class="modal-content1">
-      <div style="display:flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
-        <h5 style="margin:0;">Lista de Asistentes</h5>
-        <button id="cerrarModalAsistentes"
-          style="background:none; border:none; font-size: 1.4rem; cursor:pointer; color:#555;"
-          aria-label="Cerrar modal">✖</button>
+      <div class="botones">
+        <button id="btnConfirmarAsistencia">Confirmar</button>
+        <button id="abrirModalAsistentes">Lista</button>
       </div>
-      <div id="listaAsistentes">Cargando asistentes...</div>
+      </div>
     </div>
-  </div>
 
-  <style>
- .contenedor-asistencia {
-  margin: 40px auto;
-  max-width: 485px;
-  padding: 20px;
-  text-align: center;
-}
 
-.contenedor-asistencia input {
-  width: 100%;
-  padding: 12px;
-  font-size: 16px;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  box-sizing: border-box;
-}
+      <!-- Modal personalizado -->
+      <div id="modalAsistentes" class="modal">
+        <div class="modal-content1">
+          <div style="display:flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+            <h5 style="margin:0;">Lista de Asistentes</h5>
+            <button id="cerrarModalAsistentes"
+              style="background:none; border:none; font-size: 1.4rem; cursor:pointer; color:#555;"
+              aria-label="Cerrar modal">✖</button>
+          </div>
+          <div id="listaAsistentes">Cargando asistentes...</div>
+        </div>
+      </div>
 
-.botones {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
+      <style>
+    .contenedor-asistencia {
+      margin: 40px auto;
+      max-width: 485px;
+      padding: 20px;
+      text-align: center;
+    }
 
-.botones button {
-  padding: 10px 16px;
-  font-size: 14px;
-  border: none;
-  border-radius: 6px;
-  background-color: #dfc040;
-  color: #333;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
+    .contenedor-asistencia input {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+    }
 
-.botones button:hover {
-  background-color: #c9aa36;
-}
+    .botones {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
 
-@media (max-width: 480px) {
-  .contenedor-asistencia {
-    padding: 15px;
-    margin: 20px 10px;
-  }
+    .botones button {
+      padding: 10px 16px;
+      font-size: 14px;
+      border: none;
+      border-radius: 6px;
+      background-color: #dfc040;
+      color: #333;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
 
-  .botones {
-    flex-direction: column;
-  }
+    .botones button:hover {
+      background-color: #c9aa36;
+    }
 
-  .botones button {
-    width: 100%;
-  }
-}
+    @media (max-width: 480px) {
+      .contenedor-asistencia {
+        padding: 15px;
+        margin: 20px 10px;
+      }
 
-/* Modal base SOLO para modal asistencia */
-#modalAsistentes {
-  visibility: hidden;
-  opacity: 0;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-  padding: 20px;
-  box-sizing: border-box;
-}
+      .botones {
+        flex-direction: column;
+      }
 
-#modalAsistentes.active {
-  visibility: visible;
-  opacity: 1;
-}
+      .botones button {
+        width: 100%;
+      }
+    }
 
-#modalAsistentes .modal-content1 {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 500px;
-  max-height: 80vh;
-  overflow-y: auto;
-  text-align: left;
-  box-sizing: border-box;
-}
+    /* Modal base SOLO para modal asistencia */
+    #modalAsistentes {
+      visibility: hidden;
+      opacity: 0;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      padding: 20px;
+      box-sizing: border-box;
+    }
 
-#modalAsistentes .modal-content1 h5 {
-  margin: 0;
-}
+    #modalAsistentes.active {
+      visibility: visible;
+      opacity: 1;
+    }
 
-/* Tabla de asistentes SOLO dentro modalAsistentes */
-#modalAsistentes table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
-  margin-top: 10px;
-}
+    #modalAsistentes .modal-content1 {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 500px;
+      max-height: 80vh;
+      overflow-y: auto;
+      text-align: left;
+      box-sizing: border-box;
+    }
 
-#modalAsistentes th,
-#modalAsistentes td {
-  padding: 8px;
-  border: 1px solid #ccc;
-}
+    #modalAsistentes .modal-content1 h5 {
+      margin: 0;
+    }
 
-#modalAsistentes th {
-  background-color: #dfc040;
-  color: white;
-}
+    /* Tabla de asistentes SOLO dentro modalAsistentes */
+    #modalAsistentes table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      margin-top: 10px;
+    }
 
-/* Botones de paginación dentro modalAsistentes */
-#modalAsistentes button.pageBtn {
-  background-color: #dfc040;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 0 5px;
-  color: black;  
-}
+    #modalAsistentes th,
+    #modalAsistentes td {
+      padding: 6px;
+      border: 1px solid #ccc;
+    }
 
-#modalAsistentes button.pageBtn:disabled {
-  opacity: 0.6;
-  cursor: default;
-}
+    #modalAsistentes th {
+      background-color: #dfc040;
+      color: white;
+    }
 
-/* Botón de cerrar modal asistencia */
-#cerrarModalAsistentes {
-  background: none;
-  border: none;
-  font-size: 1.4rem;
-  cursor: pointer;
-  color: #555;
-}
+    /* Botones de paginación dentro modalAsistentes */
+    #modalAsistentes button.pageBtn {
+      background-color: #dfc040;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 0 5px;
+      color: black;  
+    }
+
+    #modalAsistentes button.pageBtn:disabled {
+      opacity: 0.6;
+      cursor: default;
+    }
+
+    /* Botón de cerrar modal asistencia */
+    #cerrarModalAsistentes {
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      cursor: pointer;
+      color: #555;
+    }
 
   </style>
 
@@ -1065,7 +1065,7 @@
   <script src="js/main.js"></script>
 
 
-  <script type="module">
+<script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/11.8.0/firebase-app.js";
   import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebasejs/11.8.0/firebase-database.js";
 
@@ -1165,20 +1165,33 @@
           <thead>
             <tr>
               <th style="border-bottom:1px solid #ccc;">Nombre</th>
-              <th style="border-bottom:1px solid #ccc;">Hora</th>
+              <th style="border-bottom:1px solid #ccc;">Fecha y Hora</th>
             </tr>
           </thead>
           <tbody>
       `;
 
       asistentesPagina.forEach((a) => {
-        const hora = a.fecha
-          ? new Date(a.fecha).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
-          : '';
+        let fechaHora = '';
+        if (a.fecha) {
+          const fechaObj = new Date(a.fecha);
+          const dia = String(fechaObj.getDate()).padStart(2, '0');
+          const mes = String(fechaObj.getMonth() + 1).padStart(2, '0');
+          const anio = String(fechaObj.getFullYear()).slice(-2);
+
+          let horas = fechaObj.getHours();
+          const minutos = String(fechaObj.getMinutes()).padStart(2, '0');
+          const ampm = horas >= 12 ? 'pm' : 'am';
+          horas = horas % 12;
+          horas = horas ? horas : 12; // la hora 0 se debe mostrar como 12
+
+          fechaHora = `${dia}/${mes}/${anio} - ${horas}:${minutos} ${ampm}`;
+        }
+
         html += `
           <tr>
             <td>${a.nombre}</td>
-            <td>${hora}</td>
+            <td>${fechaHora}</td>
           </tr>
         `;
       });
@@ -1204,6 +1217,7 @@
     }
   });
 </script>
+
 
 
 
