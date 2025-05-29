@@ -29,8 +29,8 @@
   <link rel="stylesheet" href="css/style.css">
 
 <script>
-  const autenticado = sessionStorage.getItem("autenticado");
-  const expira = parseInt(sessionStorage.getItem("expira") || '0', 10);
+  const autenticado = localStorage.getItem("autenticado");
+  const expira = parseInt(localStorage.getItem("expira") || '0', 10);
 
   if (autenticado !== "true" || Date.now() > expira) {
     window.location.href = 'index.html';

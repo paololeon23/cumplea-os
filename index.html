@@ -177,8 +177,8 @@
                 });
             } else {
                 // Guardar sesión con expiración de 5 minutos
-                sessionStorage.setItem("autenticado", "true");
-                sessionStorage.setItem("expira", Date.now() + 15 * 60 * 1000); // 5 minutos en ms
+                localStorage.setItem("autenticado", "true");
+                localStorage.setItem("expira", Date.now() + 15 * 60 * 1000); // 5 minutos en ms
 
                 window.location.href = 'principal.html';
             }
