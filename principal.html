@@ -40,7 +40,29 @@
 </head>
 
 <body>
+  
+  <script>
+    function verificarSesion() {
+      const autenticado = localStorage.getItem("autenticado");
+      const expira = parseInt(localStorage.getItem("expira") || '0', 10);
 
+      if (autenticado !== "true" || Date.now() > expira) {
+        Swal.fire({
+          icon: 'warning',
+          title: 'Sesión Expirada',
+          text: 'Tu sesión expiró. Por favor, inicia sesión de nuevo.',
+          confirmButtonColor: '#cb9149',
+          allowOutsideClick: false,
+          allowEscapeKey: false,
+        }).then(() => {
+          window.location.href = 'index.html';
+        });
+      }
+    }
+
+    verificarSesion(); // Al cargar
+    setInterval(verificarSesion, 5000); // Verifica cada 5 segundos
+  </script>
 
   <!-- Audio oculto -->
   <audio id="miAudio" src="musica.mp3" preload="auto"></audio>
